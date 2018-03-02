@@ -1,0 +1,22 @@
+#app nav{
+	padding: 20px;
+}
+
+#dropdown-container {
+	padding: 20px;
+	text-align: center;
+}
+
+#holiday-title {
+	text-align: center;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#app {
+  flex: 1;
+}
