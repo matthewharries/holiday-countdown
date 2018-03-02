@@ -2,7 +2,8 @@ var app = new Vue({
 	el: '#app',
 	data: {
 		currentTime: Math.trunc((new Date()).getTime() / 1000),
-		dateToCalculate: Math.trunc((new Date()).getTime() / 1000) + 100000,
+		dateToCalculate: 10000,
+		selectedHoliday: "New Year's Day",
 		holidayList: {
 			"New Year's Day" : 'January 1, 2019', 
 			"Martin Luther King, Jr. Day": 'January 15, 2019',
@@ -33,11 +34,22 @@ var app = new Vue({
         return Math.trunc((this.dateToCalculate - this.currentTime) / 60 / 60 / 24);
     }
 	},
+	watch: {
+		selectedHoliday : function(){
+			var textDate = this.holidayList[this.selectedHoliday];
+			var date = Date.parse(textDate);
+			
+			this.dateToCalculate = Math.trunc(date / 1000)
+		}
+	},
 	methods: {
 		startTimer: function(){
 			window.setInterval(() => {
         this.currentTime = Math.trunc((new Date()).getTime() / 1000);
     	},1000);
+		},
+		changeHoliday: function(e) {
+			this.selectedHoliday = e.target.innerHTML;
 		}
 	},
 	mounted() {

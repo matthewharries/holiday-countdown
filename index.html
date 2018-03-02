@@ -50,7 +50,7 @@
 			</nav>
 			<section class="section">
 				<div class="container">
-					<h1 id="holiday-title" class="title">Until {{selected-holiday}}!</h1>
+					<h1 id="holiday-title" class="title">Until {{selectedHoliday}}!</h1>
 				</div>
 			</section>
 			<div id="dropdown-container">
@@ -65,9 +65,7 @@
 					</div>
 					<div class="dropdown-menu" id="dropdown-menu" role="menu">
 						<div class="dropdown-content">
-							<a class="dropdown-item" v-for="(item, key, index) in holidayList">
-								{{key}}
-							</a>
+							<a class="dropdown-item" v-for="(item, key, index) in holidayList" v-on:click="changeHoliday">{{key}}</a>
 						</div>
 					</div>
 				</div>
