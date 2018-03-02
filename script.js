@@ -2,7 +2,7 @@ var app = new Vue({
 	el: '#app',
 	data: {
 		currentTime: Math.trunc((new Date()).getTime() / 1000),
-		dateToCalculate: 10000,
+		dateToCalculate: 10000000,
 		selectedHoliday: "New Year's Day",
 		holidayList: {
 			"New Year's Day" : 'January 1, 2019', 
@@ -54,6 +54,7 @@ var app = new Vue({
 	},
 	mounted() {
 		this.startTimer();
+		this.dateToCalculate = Math.trunc(Date.parse(this.holidayList[this.selectedHoliday]) / 1000);
 	},
 	
 });
