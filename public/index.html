@@ -70,8 +70,39 @@
 					</div>
 				</div>
 			</div>
+			<div id="userInput">
+				<div class="field">
+					<label class="label">Holiday Name</label>
+					<div class="control">
+						<input v-model="holiday" class="input" type="text" placeholder="Holiday Name">
+					</div>
+				</div>
+				
+				<div id="dateEntry">
+					<div class="field" id="month">
+						<label class="label">Month</label>
+						<div class="control">
+							<div class="select">
+								<select v-model="month">
+									<option v-for="month in months">{{month}}</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="field">
+						<label class="label">Day</label>
+						<div class="control">
+							<input v-model="day" class="input" type="text" placeholder="Day">
+						</div>
+					</div>
+				</div>
+				<div class="control field">
+					<button v-on:click="addHoliday" class="button is-info">Add Holiday</button>
+				</div>
+			</div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
     <script src="/script.js"></script>
   </body>
 	<footer class="footer">

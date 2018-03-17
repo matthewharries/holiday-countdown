@@ -7,6 +7,18 @@
 	text-align: center;
 }
 
+#userInput {
+	padding: 40px;
+}
+
+#month{
+	padding-right: 20px;
+}
+
+#dateEntry {
+	display: inline-flex;
+}
+
 #holiday-title {
 	text-align: center;
 }

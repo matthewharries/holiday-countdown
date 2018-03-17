@@ -1,0 +1,24 @@
+{
+  "name": "creativeproject3-4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewharries/holiday-countdown.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matthewharries/holiday-countdown/issues"
+  },
+  "homepage": "https://github.com/matthewharries/holiday-countdown#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3"
+  }
+}
