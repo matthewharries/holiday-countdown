@@ -40,7 +40,7 @@ var app = new Vue({
 	},
 	methods: {
 		getHolidays: function(){
-			axios.get("http://localhost:3000/api/holiday").then(response => {
+			axios.get("/api/holiday").then(response => {
 				this.holidayList = response.data;
 				this.selectedHoliday = "New Year's Day";
 				var textDate = this.holidayList[this.selectedHoliday];
@@ -73,7 +73,7 @@ var app = new Vue({
 				dateToAdd = new Date(this.month + this.day + ", " + (currentYear + 1));
 			}
 			
-			axios.post("http://localhost:3000/api/holiday",{
+			axios.post("/api/holiday",{
 				name: this.holiday,
 				date: dateToAdd
 			}).then(response => {
